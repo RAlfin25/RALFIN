@@ -85,3 +85,17 @@ body {
     }
 }
 
+@media (max-width: 600px)  {
+    .hero img {
+        position: relative;
+        z-index: 1;
+        height: 100px;
+    }
+    
+    .hero p {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        font-size: 2rem;
+    }
+}
