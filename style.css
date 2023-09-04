@@ -1,46 +1,25 @@
-:root {
-    --color: #252525;
-}
-
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+*{
     margin: 0;
     padding: 0;
 }
 
-.content{ 
-    align-items: center;
-    display: flex;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 20px;
+:root {
+    --color: #252525;
+    --color-1: #000;
+    --color-2: #ff0057;
+    --color-3: #fff;
+    --color-4: #1d1d1d;
 }
 
-.hero {
-    position: relative;
-    background: white;
-    color: #252525;
-    height: 100vh;
-    display: flex;
-    overflow: hidden;
+h1, h2, h3, a, p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.hero img {
-    position: relative;
-    z-index: 1;
-    
-    height: 200px;
+a{
+    text-decoration: none;
 }
 
-.hero p {
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    font-size: 4rem;
-    line-height: 0;
-    color: rgba(37, 37, 37, 0.9);
-}
-
+/*Waves*/
 .waves {
     position: absolute;
     bottom: 0;
@@ -85,17 +64,325 @@ body {
     }
 }
 
-@media (max-width: 600px)  {
-    .hero img {
-        position: relative;
-        z-index: 1;
-        height: 100px;
-    }
+/*Navbar*/
+.nav_menu {
+    padding: 15px 30px 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: 0.3s;
+ 
+  }
+
+
+  .menu li {
+    display: inline-block;
+    margin-left: 30px;
+  }
+  
+  .menu a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--color-1) ;
+    transition: 0.2s;
+    font-size: 20px;
+  }
+  
+  .menu a::after {
+    display: block;
+    content: "";
+    padding-top: 1%;
+    border-bottom: solid 3px var(--color-1);
+    padding-bottom: 1%;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+  }
+  .nav_menu div a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .logo {
+    position: relative;
+    margin-top: -15px;
+  }
+  
+  .logo img {
+    position: relative;
+    top: 5px;
+    width: 70px;
+  }
+
+  .head-logo a{
+    display: inline;
+    text-decoration: none;
+  }
+
+  .active-btn {
+    font-weight: bolder;
+  }
+
+  /*Home*/
+.Home {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
     
-    .hero p {
-        text-align: center;
-        position: relative;
-        z-index: 1;
-        font-size: 2rem;
-    }
+}
+
+  .home2{
+    position: relative;
+    z-index: 1;
+    margin: 150px 200px;
+    display: grid;
+    grid-template-areas: "intro profil";
+  }
+.intro {
+    padding-right: 280px;
+}
+
+.intro h1{
+    line-height: 2em;
+}
+
+.intro span {
+  color: var(--color-2);
+}
+
+.intro h3{
+    padding-bottom: 20px;
+}
+
+  .link svg {
+    width: 40px;
+    color: var(--color-3);
+  }
+
+  .link li{
+    display: inline;
+  }
+
+  .intro {
+    align-self: center;
+    grid-area: intro;
+    text-decoration: none;
+  }
+
+  .intro h1 {
+    font-size: 50px;
+    font-weight: bold;
+
+  }
+
+  .profil {
+    grid-area: profil;
+  }
+
+.blob{
+    fill: var(--color);
+    width: 350px;
+}
+
+  .blob_img{
+    width: 200px;
+    top: 200px;
+  }
+
+/*navbar 2*/
+.nav_flex {
+  padding: 20px 0px;
+    display: flex;
+    background-color: var(--color-4);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    z-index: 999;
+    transition: 0.3s;
+} 
+
+.NAV{
+  cursor: pointer;
+    font-size: 15px;
+    font-family: "Radiance",serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    width: -webkit-fill-available;
+    max-width: 300px;
+    transition: color,text-shadow .2s ease;
+}
+
+.NAV a{
+  font-size: 25px;
+  color: var(--color-3);
+}
+
+/*About ME*/
+.About-Me{
+  height: auto;
+  background-color: var(--color-4);
+  padding: 100px;
+}
+
+.title{
+  font-size: 48px;
+  color: var(--color-3);
+  text-align: center;
+}
+
+.title span{
+  color: var(--color-2);
+}
+
+.about {
+  color: var(--color-3);
+  text-align: justify;
+  margin: 50px 300px 0;
+}
+
+.about h3 {
+  color: var(--color-2);
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.about p{
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+
+
+/*Pendidikan*/
+.school {
+  height: 100hv;
+  background-color: var(--color-4);
+}
+
+.tag-school h1{
+  color: white;
+  font-size: 64px;
+  padding: 20px 60px;
+}
+
+.container {
+position: relative;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.container .card{
+margin: 50px;
+position: relative;
+cursor: pointer;
+}
+
+.container .card .face{
+width: 400px;
+height: 300px;
+transition: 0.5s;
+}
+
+.container .card .face.face1{
+position: relative;
+background: #333;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1;
+transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+background: var(--color-2);
+transform: translateY(0);
+}
+.container .card .faee.face1{
+opacity: 0.2;
+transition: 0.5s;  
+}
+
+.container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+  max-width: 150px;
+  padding: 0 100px;
+} 
+
+.container .card .face.face1 .content h3{
+  margin: 10px 0 0;
+  padding: 0;
+  color: var(--color-3);
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.container .card .face.face2{
+  position: relative;
+  background: var(--color-3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-200px);
+}
+
+.container .card:hover .face.face2 {
+  transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+  margin: 0;
+  padding: 0;
+}
+
+/*Skill*/
+.skill {
+  height: 100hv;
+  background-color: var(--color-4);
+}
+
+.title-skill h1{
+  color: white;
+  font-size: 64px;
+  padding: 20px 60px;
+}
+
+.content-skill{
+  color: var(--color-3);
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.content-skill h2{
+  color: var(--color-2);
+  line-height: 1.5em
+}
+
+.content-skill img{
+ margin: 15px;
+  height: 100px;
+}
+
+/*Footer*/
+.footer {
+  background: var(--color-2);
+  height: 100px;}
+
+.copyright{
+ text-align: center;
+ justify-content: center;
+ padding: 40px;
+ font-size: 1em;
 }
